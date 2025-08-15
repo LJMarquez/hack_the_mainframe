@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mainframe Admin - Dev Console</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="dev-page">
+    <!-- Password Modal -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <h2>ADMIN ACCESS REQUIRED</h2>
+            <p>Enter developer password:</p>
+            <input type="password" id="devPassword" placeholder="Password">
+            <button id="unlockDev">AUTHENTICATE</button>
+            <div id="passwordError" class="error-message hidden">Access Denied</div>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard -->
+    <div id="adminDashboard" class="hidden">
+        <header class="admin-header">
+            <h1>MAINFRAME ADMIN CONSOLE</h1>
+            <div class="refresh-indicator">
+                <span>Auto-refresh: </span>
+                <span id="refreshCountdown">5</span>s
+            </div>
+        </header>
+
+        <main class="admin-content">
+            <div class="leaderboard-container">
+                <h2>AGENT LEADERBOARD</h2>
+                <div id="leaderboardTable" class="leaderboard">
+                    <div class="loading">Loading agent data...</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

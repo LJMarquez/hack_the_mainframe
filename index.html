@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack the Mainframe</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Name Input Modal -->
+    <div id="nameModal" class="modal">
+        <div class="modal-content">
+            <h2>INITIALIZE AGENT</h2>
+            <p>Enter your codename to begin infiltration:</p>
+            <input type="text" id="playerName" placeholder="Agent Codename" maxlength="20">
+            <button id="startGame">BEGIN HACK</button>
+        </div>
+    </div>
+
+    <!-- Main Game Interface -->
+    <div id="gameContainer" class="hidden">
+        <header class="game-header">
+            <h1>MAINFRAME ACCESS</h1>
+            <div class="timer-container">
+                <span>TIME: </span>
+                <span id="timer">00.00</span>
+                <span>s</span>
+            </div>
+        </header>
+
+        <main class="game-area">
+            <div id="gameStatus" class="status-display">
+                <p>Initializing connection...</p>
+            </div>
+            
+            <div id="gameContent" class="game-content">
+                <!-- Game content will be dynamically loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal hidden">
+        <div class="modal-content success">
+            <div class="success-animation">
+                <h2>ACCESS GRANTED</h2>
+                <p>Agent <span id="successName"></span></p>
+                <p>Infiltration completed in <span id="successTime"></span> seconds</p>
+                <div class="matrix-rain"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/games/typing-challenge.js"></script>
+    <script src="js/games/pattern-matching.js"></script>
+    <script src="js/games/target-clicking.js"></script>
+    <script src="js/game-manager.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
