@@ -5,7 +5,7 @@ class TypingChallenge {
     this.onComplete = null
     this.onError = null
     this.currentChallenge = 0
-    this.totalChallenges = 3
+    this.totalChallenges = 1
     this.isActive = false
     this.startTime = null
 

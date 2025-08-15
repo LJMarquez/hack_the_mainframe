@@ -5,14 +5,14 @@ class TargetClicking {
     this.onComplete = null
     this.onError = null
     this.targetsHit = 0
-    this.targetsRequired = 8
+    this.targetsRequired = 1
     this.activeTargets = []
     this.isActive = false
     this.spawnInterval = null
     this.gameArea = null
     this.score = 0
     this.missed = 0
-    this.maxMissed = 3
+    this.maxMissed = 300
 
     // Code snippets for targets
     this.codeTargets = [

@@ -5,7 +5,7 @@ class PatternMatching {
     this.onComplete = null
     this.onError = null
     this.currentRound = 0
-    this.totalRounds = 4
+    this.totalRounds = 1
     this.sequence = []
     this.playerSequence = []
     this.isShowingPattern = false
