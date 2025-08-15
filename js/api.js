@@ -1,8 +1,12 @@
+const CONFIG = require("./config")
+
 // Google Apps Script API Integration
 class GameAPI {
   constructor() {
-    this.baseURL = window.CONFIG.API_ENDPOINT
-    this.endpoints = window.CONFIG.ENDPOINTS
+    // this.baseURL = window.CONFIG.API_ENDPOINT
+    // this.endpoints = window.CONFIG.ENDPOINTS
+    this.baseURL = CONFIG.API_ENDPOINT
+    this.endpoints = CONFIG.ENDPOINTS
     this.retryAttempts = 3
     this.retryDelay = 1000 // 1 second
   }
@@ -167,7 +171,8 @@ class GameAPI {
 
 // Initialize API when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("[v0] Initializing Game API")
+  console.log("Initializing Game API")
+  console.log(CONFIG);
   window.GameAPI = new GameAPI()
 
   // Test connection if API is configured

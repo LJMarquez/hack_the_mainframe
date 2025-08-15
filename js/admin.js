@@ -68,7 +68,8 @@ class AdminDashboard {
 
   handleAuthentication() {
     const enteredPassword = this.passwordInput.value.trim()
-    const correctPassword = window.CONFIG.ADMIN_PASSWORD
+    // const correctPassword = window.CONFIG.ADMIN_PASSWORD
+    const correctPassword = CONFIG.ADMIN_PASSWORD
 
     if (enteredPassword === correctPassword) {
       this.authenticate()
@@ -83,7 +84,7 @@ class AdminDashboard {
     this.showAdminDashboard()
     this.startLeaderboardRefresh()
 
-    console.log("[v0] Admin authenticated successfully")
+    console.log("Admin authenticated successfully")
   }
 
   showPasswordError() {
@@ -260,7 +261,8 @@ class AdminDashboard {
     // Set up auto-refresh
     this.refreshInterval = setInterval(() => {
       this.loadLeaderboard()
-    }, window.CONFIG.GAME_SETTINGS.AUTO_REFRESH_INTERVAL)
+    // }, window.CONFIG.GAME_SETTINGS.AUTO_REFRESH_INTERVAL)
+    }, CONFIG.GAME_SETTINGS.AUTO_REFRESH_INTERVAL)
 
     // Start countdown timer
     this.startRefreshCountdown()

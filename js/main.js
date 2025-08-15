@@ -77,7 +77,8 @@ class MainApp {
   }
 
   validatePlayerName(name) {
-    const CONFIG = window.CONFIG // Declare CONFIG
+    // const CONFIG = window.CONFIG // Declare CONFIG
+    // const CONFIG = CONFIG
     return name.length >= 1 && name.length <= CONFIG.GAME_SETTINGS.MAX_NAME_LENGTH
   }
 
@@ -118,7 +119,7 @@ class MainApp {
 
 // Initialize app when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("[v0] Initializing Hack the Mainframe game")
+  console.log("Initializing Hack the Mainframe game")
   window.mainApp = new MainApp()
 })
 
