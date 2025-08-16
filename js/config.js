@@ -8,7 +8,7 @@ const CONFIG = {
 
   // Game settings
   GAME_SETTINGS: {
-    AUTO_REFRESH_INTERVAL: 5000, // 5 seconds for leaderboard
+    AUTO_REFRESH_INTERVAL: 10000, // 5 seconds for leaderboard
     MAX_NAME_LENGTH: 20,
     GAMES: ["typing", "pattern", "target"], // Available minigames
     DIFFICULTY_SCALING: true,
